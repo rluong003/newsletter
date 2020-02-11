@@ -4,6 +4,7 @@ const request = require("request");
 
 const app = express();
 
+console.log(key);
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended: true}));
 
@@ -36,7 +37,7 @@ var options = {
     url: "https://us4.api.mailchimp.com/3.0/lists/f8c5fb5b18",
     method: "POST",
     headers:{
-        "Authorization": "bigrich 719cd6c9b465ba3b450098221bc69e6e-us4"
+        "Authorization": "bigrich " //api key goes here,
     },
 
     body: jsonData
